@@ -26,6 +26,7 @@ function SmurfForm() {
         <input
           type="text"
           name="name"
+          placeholder="New Smurf Name"
           value={formValues.name}
           onChange={handleChange}
         />
@@ -36,6 +37,7 @@ function SmurfForm() {
         <input
           type="text"
           name="age"
+          placeholder="New Smurf Age"
           value={formValues.age}
           onChange={handleChange}
         />
@@ -46,6 +48,7 @@ function SmurfForm() {
         <input
           type="text"
           name="height"
+          placeholder="New Smurf Height"
           value={formValues.height}
           onChange={handleChange}
         />
