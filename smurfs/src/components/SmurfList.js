@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { fetchSmurfs } from "../store/actions";
 
-function SmurfList({ smurfData, isLoading, error, fetchSmurfs }) {
+function SmurfList({ smurfData, fetchSmurfs }) {
   useEffect(() => {
     fetchSmurfs();
   }, []);
@@ -25,8 +25,6 @@ function SmurfList({ smurfData, isLoading, error, fetchSmurfs }) {
 const mapStateToProps = (state) => {
   return {
     smurfData: state.smurfData,
-    isLoading: state.isLoading,
-    error: state.error,
   };
 };
 
