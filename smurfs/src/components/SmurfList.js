@@ -5,7 +5,7 @@ import { fetchSmurfs } from "../store/actions";
 function SmurfList({ smurfData, isLoading, error, fetchSmurfs }) {
   useEffect(() => {
     fetchSmurfs(smurfData);
-  }, [smurfData]);
+  }, []);
 
   return (
     <div>

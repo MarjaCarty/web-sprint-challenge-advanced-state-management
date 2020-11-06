@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import { postSmurf } from "../store/actions";
 
 const initialFormValues = {
   name: "",
@@ -7,7 +8,7 @@ const initialFormValues = {
   height: "",
 };
 
-function SmurfForm({ fetchSmurfs }) {
+function SmurfForm({ postSmurf }) {
   const [formValues, setFormValues] = useState(initialFormValues);
 
   const handleChange = (e) => {
@@ -17,6 +18,7 @@ function SmurfForm({ fetchSmurfs }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    postSmurf(formValues);
     setFormValues(initialFormValues);
   };
 
@@ -60,4 +62,4 @@ function SmurfForm({ fetchSmurfs }) {
   );
 }
 
-export default connect(() => {}, {})(SmurfForm);
+export default connect(() => {}, { postSmurf })(SmurfForm);
