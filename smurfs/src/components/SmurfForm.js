@@ -62,4 +62,8 @@ function SmurfForm({ postSmurf }) {
   );
 }
 
-export default connect(() => {}, { postSmurf })(SmurfForm);
+const mapStateToProps = (state) => {
+  return {};
+};
+
+export default connect(mapStateToProps, { postSmurf })(SmurfForm);
