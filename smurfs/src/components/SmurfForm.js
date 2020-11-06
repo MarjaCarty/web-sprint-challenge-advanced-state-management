@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
 
 const initialFormValues = {
   name: "",
@@ -6,7 +7,7 @@ const initialFormValues = {
   height: "",
 };
 
-function SmurfForm() {
+function SmurfForm({ fetchSmurfs }) {
   const [formValues, setFormValues] = useState(initialFormValues);
 
   const handleChange = (e) => {
@@ -59,4 +60,4 @@ function SmurfForm() {
   );
 }
 
-export default SmurfForm;
+export default connect(() => {}, {})(SmurfForm);
